@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/user/repos/cv-extractor/cv-extractor.sch</source>
-    <date>Wed 27 Oct 2021 12:46:46 AM PDT</date>
+    <date>Tue 19 Apr 2022 05:57:44 PM PDT</date>
     <tool>Eeschema 5.1.7-a382d34a8~88~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -31,22 +31,22 @@
       <tstamp>5FA9D48F</tstamp>
     </comp>
     <comp ref="C1">
-      <value>10uF</value>
+      <value>470nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="JLCPCB">C344022</field>
+        <field name="JLCPCB"> C1623</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FEFF971</tstamp>
     </comp>
     <comp ref="C5">
-      <value>10uF</value>
+      <value>470nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="JLCPCB">C344022</field>
+        <field name="JLCPCB"> C1623</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -102,50 +102,38 @@
       <fields>
         <field name="Digikey">732-2094-ND</field>
       </fields>
-      <libsource lib="synth-components" part="power_connector_10pos" description=""/>
+      <libsource lib="cv-extractor-rescue" part="power_connector_10pos-synth-components" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FFC986F</tstamp>
     </comp>
-    <comp ref="J1">
-      <value>mono-jack</value>
-      <footprint>synth-components:mono-jack-thonk</footprint>
-      <fields>
-        <field name="Link">https://www.thonk.co.uk/shop/thonkiconn/</field>
-        <field name="PN">PJ398SM</field>
-        <field name="Vendor">Thonk</field>
-      </fields>
-      <libsource lib="synth-components" part="mono-jack" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6004C979</tstamp>
-    </comp>
     <comp ref="R7">
-      <value>2.2k</value>
+      <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="JLCPCB">C4190</field>
+        <field name="JLCPCB">C21190</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>600D23A3</tstamp>
     </comp>
     <comp ref="R8">
-      <value>2.2k</value>
+      <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="JLCPCB">C4190</field>
+        <field name="JLCPCB">C21190</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>600DA258</tstamp>
     </comp>
     <comp ref="C6">
-      <value>10uF</value>
+      <value>470nF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="JLCPCB">C344022</field>
+        <field name="JLCPCB"> C1623</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -159,7 +147,7 @@
       <tstamp>60143A63</tstamp>
     </comp>
     <comp ref="J2">
-      <value>mono-jack</value>
+      <value>CV Out</value>
       <footprint>synth-components:mono-jack-thonk</footprint>
       <fields>
         <field name="Link">https://www.thonk.co.uk/shop/thonkiconn/</field>
@@ -193,17 +181,6 @@
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>61780D62</tstamp>
-    </comp>
-    <comp ref="R11">
-      <value>1k</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="JLCPCB">C21190</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6179DEDF</tstamp>
     </comp>
     <comp ref="JP1">
       <value>SolderJumper_2_Bridged</value>
@@ -309,35 +286,77 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FABED14</tstamp>
     </comp>
-    <comp ref="R9">
-      <value>100k</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="JLCPCB">C25803</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>617A6FE1</tstamp>
-    </comp>
-    <comp ref="R10">
-      <value>100k</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="JLCPCB">C25803</field>
-      </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>617AEAD5</tstamp>
-    </comp>
     <comp ref="TP4">
-      <value>Abs</value>
+      <value>GND</value>
       <footprint>matterwave:TestPoint_TP107</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>617EA3AF</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="JLCPCB">C21190</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61E6F71C</tstamp>
+    </comp>
+    <comp ref="RV2">
+      <value>10k</value>
+      <footprint>matterwave:pot_bourns_PTV09</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_POT" description="Potentiometer"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61E88864</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Wave In</value>
+      <footprint>synth-components:mono-jack-thonk</footprint>
+      <fields>
+        <field name="Link">https://www.thonk.co.uk/shop/thonkiconn/</field>
+        <field name="PN">PJ398SM</field>
+        <field name="Vendor">Thonk</field>
+      </fields>
+      <libsource lib="synth-components" part="mono-jack" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6004C979</tstamp>
+    </comp>
+    <comp ref="RD1">
+      <value>1M</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="JLCPCB">C21190</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>626235C1</tstamp>
+    </comp>
+    <comp ref="RV3">
+      <value>10k</value>
+      <footprint>matterwave:pot_bourns_PTV09</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Field4">Output Gain</field>
+      </fields>
+      <libsource lib="Device" part="R_POT" description="Potentiometer"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6265A332</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="JLCPCB">C21190</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6268C76A</tstamp>
     </comp>
   </components>
   <libparts>
@@ -475,6 +494,22 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="R_POT">
+      <description>Potentiometer</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">R_POT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Jumper" part="SolderJumper_2_Bridged">
       <description>Solder Jumper, 2-pole, closed/bridged</description>
       <docs>~</docs>
@@ -488,6 +523,30 @@
       <pins>
         <pin num="1" name="A" type="passive"/>
         <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="cv-extractor-rescue" part="power_connector_10pos-synth-components">
+      <footprints>
+        <fp>CONN_61201021621_WRE</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">power_connector_10pos-synth-components</field>
+        <field name="Footprint">synth-components:power_connector_10pos</field>
+        <field name="vendor">digikey</field>
+        <field name="PN">732-2094-ND</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspc"/>
+        <pin num="2" name="2" type="unspc"/>
+        <pin num="3" name="3" type="unspc"/>
+        <pin num="4" name="4" type="unspc"/>
+        <pin num="5" name="5" type="unspc"/>
+        <pin num="6" name="6" type="unspc"/>
+        <pin num="7" name="7" type="unspc"/>
+        <pin num="8" name="8" type="unspc"/>
+        <pin num="9" name="9" type="unspc"/>
+        <pin num="10" name="10" type="unspc"/>
       </pins>
     </libpart>
     <libpart lib="synth-components" part="R_POT_Dual_Separate">
@@ -523,30 +582,6 @@
         <pin num="3" name="~" type="input"/>
       </pins>
     </libpart>
-    <libpart lib="synth-components" part="power_connector_10pos">
-      <footprints>
-        <fp>CONN_61201021621_WRE</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">power_connector_10pos</field>
-        <field name="Footprint">synth-components:power_connector_10pos</field>
-        <field name="vendor">digikey</field>
-        <field name="PN">732-2094-ND</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="unspc"/>
-        <pin num="2" name="2" type="unspc"/>
-        <pin num="3" name="3" type="unspc"/>
-        <pin num="4" name="4" type="unspc"/>
-        <pin num="5" name="5" type="unspc"/>
-        <pin num="6" name="6" type="unspc"/>
-        <pin num="7" name="7" type="unspc"/>
-        <pin num="8" name="8" type="unspc"/>
-        <pin num="9" name="9" type="unspc"/>
-        <pin num="10" name="10" type="unspc"/>
-      </pins>
-    </libpart>
   </libparts>
   <libraries>
     <library logical="Amplifier_Operational">
@@ -561,130 +596,143 @@
     <library logical="Jumper">
       <uri>/usr/share/kicad/library/Jumper.lib</uri>
     </library>
+    <library logical="cv-extractor-rescue">
+      <uri>/home/user/repos/cv-extractor/cv-extractor-rescue.lib</uri>
+    </library>
     <library logical="synth-components">
       <uri>/home/user/repos/synth_libs/synth_components.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(R3-Pad1)">
-      <node ref="U1" pin="9"/>
-      <node ref="R4" pin="1"/>
-      <node ref="R5" pin="1"/>
-      <node ref="R6" pin="2"/>
-      <node ref="R3" pin="1"/>
+    <net code="1" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="D2" pin="1"/>
+      <node ref="U1" pin="7"/>
     </net>
-    <net code="2" name="Net-(D2-Pad2)">
-      <node ref="R2" pin="1"/>
-      <node ref="R4" pin="2"/>
-      <node ref="D2" pin="2"/>
-      <node ref="R5" pin="2"/>
-    </net>
-    <net code="3" name="Net-(R7-Pad1)">
-      <node ref="RV1" pin="1"/>
-      <node ref="RV1" pin="2"/>
-      <node ref="R7" pin="1"/>
-    </net>
-    <net code="4" name="Net-(C5-Pad2)">
-      <node ref="C5" pin="2"/>
-      <node ref="R11" pin="2"/>
-      <node ref="U1" pin="13"/>
-      <node ref="U1" pin="14"/>
-      <node ref="C6" pin="2"/>
-    </net>
-    <net code="5" name="GND">
+    <net code="2" name="GND">
+      <node ref="R9" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="C8" pin="1"/>
+      <node ref="J2" pin="1"/>
+      <node ref="C10" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="RD1" pin="1"/>
+      <node ref="J1" pin="1"/>
+      <node ref="J3" pin="6"/>
+      <node ref="J3" pin="7"/>
       <node ref="J3" pin="8"/>
       <node ref="TP4" pin="1"/>
-      <node ref="J3" pin="7"/>
-      <node ref="J3" pin="6"/>
+      <node ref="R12" pin="1"/>
       <node ref="J3" pin="5"/>
       <node ref="J3" pin="4"/>
       <node ref="J3" pin="3"/>
       <node ref="U1" pin="5"/>
-      <node ref="U1" pin="10"/>
       <node ref="C9" pin="1"/>
-      <node ref="C8" pin="1"/>
-      <node ref="C7" pin="2"/>
-      <node ref="C10" pin="2"/>
-      <node ref="J2" pin="1"/>
-      <node ref="C1" pin="1"/>
-      <node ref="J1" pin="1"/>
+      <node ref="U1" pin="10"/>
     </net>
-    <net code="6" name="Net-(J2-Pad2)">
-      <node ref="J2" pin="3"/>
-      <node ref="J2" pin="2"/>
-      <node ref="R11" pin="1"/>
-      <node ref="TP3" pin="1"/>
+    <net code="3" name="Net-(D1-Pad1)">
+      <node ref="R1" pin="1"/>
+      <node ref="U1" pin="6"/>
+      <node ref="D1" pin="1"/>
+      <node ref="R2" pin="2"/>
     </net>
-    <net code="7" name="Net-(JP1-Pad1)">
-      <node ref="TP1" pin="1"/>
-      <node ref="JP1" pin="1"/>
-      <node ref="U1" pin="2"/>
-      <node ref="U1" pin="1"/>
-    </net>
-    <net code="8" name="Net-(JP1-Pad2)">
-      <node ref="R3" pin="2"/>
-      <node ref="JP1" pin="2"/>
-      <node ref="R1" pin="2"/>
-    </net>
-    <net code="9" name="Net-(JP2-Pad1)">
+    <net code="4" name="Net-(JP2-Pad1)">
       <node ref="JP2" pin="1"/>
       <node ref="U1" pin="8"/>
       <node ref="R6" pin="1"/>
     </net>
-    <net code="10" name="Net-(C5-Pad1)">
-      <node ref="R9" pin="1"/>
-      <node ref="C5" pin="1"/>
-      <node ref="R10" pin="2"/>
-      <node ref="C6" pin="1"/>
-      <node ref="R8" pin="2"/>
-      <node ref="RV1" pin="3"/>
-    </net>
-    <net code="11" name="Net-(JP2-Pad2)">
+    <net code="5" name="Net-(JP2-Pad2)">
       <node ref="JP2" pin="2"/>
       <node ref="R7" pin="2"/>
       <node ref="TP2" pin="1"/>
-      <node ref="R9" pin="2"/>
     </net>
-    <net code="12" name="Net-(C1-Pad2)">
-      <node ref="RV1" pin="5"/>
-      <node ref="RV1" pin="6"/>
-      <node ref="U1" pin="12"/>
-      <node ref="R10" pin="1"/>
-      <node ref="C1" pin="2"/>
+    <net code="6" name="Net-(JP1-Pad2)">
+      <node ref="R1" pin="2"/>
+      <node ref="R3" pin="2"/>
+      <node ref="JP1" pin="2"/>
     </net>
-    <net code="13" name="Net-(D1-Pad1)">
-      <node ref="D1" pin="1"/>
-      <node ref="U1" pin="6"/>
-      <node ref="R1" pin="1"/>
-      <node ref="R2" pin="2"/>
+    <net code="7" name="Net-(R3-Pad1)">
+      <node ref="R5" pin="1"/>
+      <node ref="R4" pin="1"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R3" pin="1"/>
+      <node ref="U1" pin="9"/>
     </net>
-    <net code="14" name="Net-(D1-Pad2)">
-      <node ref="D2" pin="1"/>
-      <node ref="D1" pin="2"/>
-      <node ref="U1" pin="7"/>
+    <net code="8" name="Net-(D2-Pad2)">
+      <node ref="R5" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="R2" pin="1"/>
+      <node ref="D2" pin="2"/>
     </net>
-    <net code="15" name="Net-(J1-Pad2)">
+    <net code="9" name="Net-(J1-Pad2)">
+      <node ref="U1" pin="3"/>
+      <node ref="RD1" pin="2"/>
       <node ref="J1" pin="2"/>
       <node ref="J1" pin="3"/>
-      <node ref="U1" pin="3"/>
     </net>
-    <net code="16" name="Net-(R8-Pad1)">
-      <node ref="R8" pin="1"/>
-      <node ref="RV1" pin="4"/>
+    <net code="10" name="Net-(R12-Pad2)">
+      <node ref="U1" pin="2"/>
+      <node ref="R12" pin="2"/>
+      <node ref="RV2" pin="2"/>
+      <node ref="RV2" pin="3"/>
     </net>
-    <net code="17" name="+12V">
-      <node ref="U1" pin="4"/>
-      <node ref="C9" pin="2"/>
-      <node ref="J3" pin="10"/>
+    <net code="11" name="Net-(R9-Pad2)">
+      <node ref="RV3" pin="1"/>
+      <node ref="R9" pin="2"/>
+    </net>
+    <net code="12" name="Net-(JP1-Pad1)">
+      <node ref="TP1" pin="1"/>
+      <node ref="RV2" pin="1"/>
+      <node ref="JP1" pin="1"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="13" name="Net-(C5-Pad1)">
+      <node ref="RV1" pin="3"/>
+      <node ref="C5" pin="1"/>
+      <node ref="R8" pin="2"/>
+      <node ref="C6" pin="1"/>
+    </net>
+    <net code="14" name="+12V">
       <node ref="C7" pin="1"/>
       <node ref="J3" pin="9"/>
+      <node ref="J3" pin="10"/>
+      <node ref="U1" pin="4"/>
+      <node ref="C9" pin="2"/>
     </net>
-    <net code="18" name="-12V">
-      <node ref="U1" pin="11"/>
-      <node ref="J3" pin="2"/>
+    <net code="15" name="-12V">
       <node ref="C10" pin="1"/>
       <node ref="C8" pin="2"/>
+      <node ref="U1" pin="11"/>
+      <node ref="J3" pin="2"/>
       <node ref="J3" pin="1"/>
+    </net>
+    <net code="16" name="Net-(C1-Pad2)">
+      <node ref="RV1" pin="5"/>
+      <node ref="U1" pin="12"/>
+      <node ref="C1" pin="2"/>
+      <node ref="RV1" pin="6"/>
+    </net>
+    <net code="17" name="Net-(R8-Pad1)">
+      <node ref="RV1" pin="4"/>
+      <node ref="R8" pin="1"/>
+    </net>
+    <net code="18" name="Net-(R7-Pad1)">
+      <node ref="RV1" pin="2"/>
+      <node ref="RV1" pin="1"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="19" name="Net-(C5-Pad2)">
+      <node ref="TP3" pin="1"/>
+      <node ref="C6" pin="2"/>
+      <node ref="RV3" pin="3"/>
+      <node ref="J2" pin="2"/>
+      <node ref="U1" pin="14"/>
+      <node ref="J2" pin="3"/>
+      <node ref="C5" pin="2"/>
+    </net>
+    <net code="20" name="Net-(RV3-Pad2)">
+      <node ref="RV3" pin="2"/>
+      <node ref="U1" pin="13"/>
     </net>
   </nets>
 </export>

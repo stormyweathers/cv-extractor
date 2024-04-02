@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name cv-extractor-rescue)(type Legacy)(uri ${KIPRJMOD}/cv-extractor-rescue.lib)(options "")(descr ""))
+)

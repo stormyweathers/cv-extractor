@@ -27,18 +27,14 @@ $EndComp
 $Comp
 L power:GND #PWR01
 U 1 1 5FAA00D1
-P 2750 2000
-F 0 "#PWR01" H 2750 1750 50  0001 C CNN
-F 1 "GND" H 2755 1827 50  0000 C CNN
-F 2 "" H 2750 2000 50  0001 C CNN
-F 3 "" H 2750 2000 50  0001 C CNN
-	1    2750 2000
-	-1   0    0    1   
+P 2725 2625
+F 0 "#PWR01" H 2725 2375 50  0001 C CNN
+F 1 "GND" H 2730 2452 50  0000 C CNN
+F 2 "" H 2725 2625 50  0001 C CNN
+F 3 "" H 2725 2625 50  0001 C CNN
+	1    2725 2625
+	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	2925 2475 2925 2675
-Wire Wire Line
-	2925 2675 3525 2675
 $Comp
 L Amplifier_Operational:TL074 U1
 U 5 1 5FAA582B
@@ -50,34 +46,26 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2850 6650 50  0001 C CNN
 	5    2800 6450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3525 2375 3525 2675
 Connection ~ 3525 2375
 Wire Wire Line
-	2750 2000 2750 2075
-Wire Wire Line
-	2625 2075 2750 2075
-Wire Wire Line
 	2925 2275 2725 2275
-Wire Notes Line
-	3950 2850 2375 2850
 Wire Notes Line
 	2325 2875 2325 1800
 Wire Notes Line
 	3950 1775 3950 3175
 Text Notes 9025 1350 0    50   ~ 0
 Adjustable Sallen-Key LPF\nDual gang pot controls cutoff\nbut fixes Q=1/sqrt(2)
-Text Notes 2600 2775 0    50   ~ 0
+Text Notes 3000 1875 0    50   ~ 0
 Buffered input stage
 $Comp
 L Device:C C1
 U 1 1 5FEFF971
 P 8225 2325
 F 0 "C1" H 8300 2425 50  0000 C CNN
-F 1 "10uF" H 8225 2250 50  0000 C CNN
+F 1 "470nF" H 8075 2425 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8263 2175 50  0001 C CNN
 F 3 "~" H 8225 2325 50  0001 C CNN
-F 4 "C344022" H 8225 2325 50  0001 C CNN "JLCPCB"
+F 4 " C1623" H 8225 2325 50  0001 C CNN "JLCPCB"
 	1    8225 2325
 	-1   0    0    1   
 $EndComp
@@ -99,10 +87,10 @@ L Device:C C5
 U 1 1 5FF7D31D
 P 8475 1600
 F 0 "C5" V 8525 1700 50  0000 C CNN
-F 1 "10uF" V 8525 1425 50  0000 C CNN
+F 1 "470nF" V 8525 1425 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8513 1450 50  0001 C CNN
 F 3 "~" H 8475 1600 50  0001 C CNN
-F 4 "C344022" H 8475 1600 50  0001 C CNN "JLCPCB"
+F 4 " C1623" H 8475 1600 50  0001 C CNN "JLCPCB"
 	1    8475 1600
 	0    -1   -1   0   
 $EndComp
@@ -191,7 +179,7 @@ Wire Wire Line
 	2700 5625 2825 5625
 Connection ~ 2700 5625
 $Comp
-L synth-components:power_connector_10pos J3
+L cv-extractor-rescue:power_connector_10pos-synth-components J3
 U 1 1 5FFC986F
 P 1625 6925
 F 0 "J3" H 1867 5738 60  0000 C CNN
@@ -300,20 +288,6 @@ Wire Wire Line
 Connection ~ 2100 6075
 Wire Wire Line
 	2100 6075 2700 6075
-$Comp
-L synth-components:mono-jack J1
-U 1 1 6004C979
-P 2625 2375
-F 0 "J1" H 2498 2900 50  0000 C CNN
-F 1 "mono-jack" H 2498 2809 50  0000 C CNN
-F 2 "synth-components:mono-jack-thonk" H 2625 2375 50  0001 C CNN
-F 3 "" H 2625 2375 50  0001 C CNN
-F 4 "Thonk" H 2625 2375 50  0001 C CNN "Vendor"
-F 5 "PJ398SM" H 2625 2375 50  0001 C CNN "PN"
-F 6 "https://www.thonk.co.uk/shop/thonkiconn/" H 2625 2375 50  0001 C CNN "Link"
-	1    2625 2375
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2625 2175 2725 2175
 Wire Wire Line
@@ -336,10 +310,10 @@ L Device:R R7
 U 1 1 600D23A3
 P 7250 2175
 F 0 "R7" V 7150 2175 50  0000 C CNN
-F 1 "2.2k" V 7250 2175 50  0000 C CNN
+F 1 "1k" V 7250 2175 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 7180 2175 50  0001 C CNN
 F 3 "~" H 7250 2175 50  0001 C CNN
-F 4 "C4190" V 7250 2175 50  0001 C CNN "JLCPCB"
+F 4 "C21190" V 7250 2175 50  0001 C CNN "JLCPCB"
 	1    7250 2175
 	0    1    1    0   
 $EndComp
@@ -348,10 +322,10 @@ L Device:R R8
 U 1 1 600DA258
 P 7825 1925
 F 0 "R8" V 7725 1925 50  0000 C CNN
-F 1 "2.2k" V 7825 1925 50  0000 C CNN
+F 1 "1k" V 7825 1925 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 7755 1925 50  0001 C CNN
 F 3 "~" H 7825 1925 50  0001 C CNN
-F 4 "C4190" V 7825 1925 50  0001 C CNN "JLCPCB"
+F 4 "C21190" V 7825 1925 50  0001 C CNN "JLCPCB"
 	1    7825 1925
 	0    1    1    0   
 $EndComp
@@ -362,10 +336,10 @@ L Device:C C6
 U 1 1 600F6812
 P 8475 1800
 F 0 "C6" V 8525 1900 50  0000 C CNN
-F 1 "10uF" V 8525 1625 50  0000 C CNN
+F 1 "470nF" V 8525 1625 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8513 1650 50  0001 C CNN
 F 3 "~" H 8475 1800 50  0001 C CNN
-F 4 "C344022" H 8475 1800 50  0001 C CNN "JLCPCB"
+F 4 " C1623" H 8475 1800 50  0001 C CNN "JLCPCB"
 	1    8475 1800
 	0    -1   -1   0   
 $EndComp
@@ -399,56 +373,48 @@ F 3 "~" H 8000 2175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7600 1925 7600 1950
-Wire Wire Line
 	7975 1925 8000 1925
 Wire Wire Line
 	8000 1925 8000 2025
 Wire Wire Line
-	9900 2275 9975 2275
-Connection ~ 9900 2275
+	9600 2275 9675 2275
+Connection ~ 9600 2275
 Wire Wire Line
-	9900 2375 9900 2275
+	9600 2375 9600 2275
 Wire Wire Line
-	10000 2375 9900 2375
+	9700 2375 9600 2375
 $Comp
 L synth-components:mono-jack J2
 U 1 1 60053D36
-P 10000 2175
-F 0 "J2" H 9875 2150 50  0000 R CNN
-F 1 "mono-jack" H 9702 2442 50  0001 R CNN
-F 2 "synth-components:mono-jack-thonk" H 10000 2175 50  0001 C CNN
-F 3 "" H 10000 2175 50  0001 C CNN
-F 4 "Thonk" H 10000 2175 50  0001 C CNN "Vendor"
-F 5 "PJ398SM" H 10000 2175 50  0001 C CNN "PN"
-F 6 "https://www.thonk.co.uk/shop/thonkiconn/" H 10000 2175 50  0001 C CNN "Link"
-	1    10000 2175
+P 9700 2175
+F 0 "J2" H 9575 2150 50  0000 R CNN
+F 1 "CV Out" H 9402 2442 50  0001 R CNN
+F 2 "synth-components:mono-jack-thonk" H 9700 2175 50  0001 C CNN
+F 3 "" H 9700 2175 50  0001 C CNN
+F 4 "Thonk" H 9700 2175 50  0001 C CNN "Vendor"
+F 5 "PJ398SM" H 9700 2175 50  0001 C CNN "PN"
+F 6 "https://www.thonk.co.uk/shop/thonkiconn/" H 9700 2175 50  0001 C CNN "Link"
+	1    9700 2175
 	-1   0    0    1   
 $EndComp
 Connection ~ 9450 2275
 Wire Wire Line
 	8700 2375 8775 2375
 Wire Wire Line
-	8700 2525 8700 2375
-Wire Wire Line
-	9450 2525 8700 2525
-Wire Wire Line
-	9450 2275 9450 2525
-Wire Wire Line
 	9375 2275 9450 2275
 Wire Wire Line
-	9900 2475 9900 2525
+	9600 2475 9600 2525
 Wire Wire Line
-	10000 2475 9900 2475
+	9700 2475 9600 2475
 $Comp
 L power:GND #PWR05
 U 1 1 5FB77053
-P 9900 2525
-F 0 "#PWR05" H 9900 2275 50  0001 C CNN
-F 1 "GND" H 9975 2375 50  0000 R CNN
-F 2 "" H 9900 2525 50  0001 C CNN
-F 3 "" H 9900 2525 50  0001 C CNN
-	1    9900 2525
+P 9600 2525
+F 0 "#PWR05" H 9600 2275 50  0001 C CNN
+F 1 "GND" H 9675 2375 50  0000 R CNN
+F 2 "" H 9600 2525 50  0001 C CNN
+F 3 "" H 9600 2525 50  0001 C CNN
+	1    9600 2525
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -470,10 +436,8 @@ Wire Notes Line
 	10325 1050 10325 2775
 Wire Wire Line
 	7450 2175 7425 2175
-Wire Wire Line
-	7100 2175 7075 2175
 Wire Notes Line
-	7050 2775 10325 2775
+	7050 3250 10325 3250
 Wire Notes Line
 	7050 1050 10325 1050
 Wire Notes Line
@@ -508,33 +472,17 @@ Wire Wire Line
 $Comp
 L Connector:TestPoint TP3
 U 1 1 61780D62
-P 9975 2275
-F 0 "TP3" H 9900 2575 50  0000 L CNN
-F 1 "Output" H 9850 2500 50  0000 L CNN
-F 2 "matterwave:TestPoint_TP107" H 10175 2275 50  0001 C CNN
-F 3 "~" H 10175 2275 50  0001 C CNN
-	1    9975 2275
+P 9675 2275
+F 0 "TP3" H 9600 2575 50  0000 L CNN
+F 1 "Output" H 9550 2500 50  0000 L CNN
+F 2 "matterwave:TestPoint_TP107" H 9875 2275 50  0001 C CNN
+F 3 "~" H 9875 2275 50  0001 C CNN
+	1    9675 2275
 	1    0    0    -1  
 $EndComp
-Connection ~ 9975 2275
+Connection ~ 9675 2275
 Wire Wire Line
-	9975 2275 10000 2275
-$Comp
-L Device:R R11
-U 1 1 6179DEDF
-P 9650 2275
-F 0 "R11" V 9550 2275 50  0000 C CNN
-F 1 "1k" V 9650 2275 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 9580 2275 50  0001 C CNN
-F 3 "~" H 9650 2275 50  0001 C CNN
-F 4 "C21190" V 9650 2275 50  0001 C CNN "JLCPCB"
-	1    9650 2275
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9450 2275 9500 2275
-Wire Wire Line
-	9800 2275 9900 2275
+	9675 2275 9700 2275
 $Comp
 L Jumper:SolderJumper_2_Bridged JP1
 U 1 1 617AAB9D
@@ -644,8 +592,6 @@ Text Notes 4150 1975 0    50   ~ 0
 Absolute value\n(Active rectifier)
 Wire Notes Line
 	2375 1775 6450 1775
-Wire Notes Line
-	6450 3175 3950 3175
 Wire Notes Line
 	6450 1775 6450 3175
 Connection ~ 4025 2375
@@ -781,58 +727,9 @@ Wire Wire Line
 	3875 2375 4025 2375
 Wire Wire Line
 	8225 2175 8775 2175
-$Comp
-L Device:R R9
-U 1 1 617A6FE1
-P 7325 1950
-F 0 "R9" V 7225 1950 50  0000 C CNN
-F 1 "100k" V 7325 1950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7255 1950 50  0001 C CNN
-F 3 "~" H 7325 1950 50  0001 C CNN
-F 4 "C25803" V 7325 1950 50  0001 C CNN "JLCPCB"
-	1    7325 1950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7075 2175 7075 1950
-Wire Wire Line
-	7075 1950 7175 1950
-Connection ~ 7075 2175
-Wire Wire Line
-	7075 2175 7025 2175
-Wire Wire Line
-	7475 1950 7600 1950
-Connection ~ 7600 1950
-Wire Wire Line
-	7600 1950 7600 2025
-$Comp
-L Device:R R10
-U 1 1 617AEAD5
-P 8200 1975
-F 0 "R10" V 8100 1975 50  0000 C CNN
-F 1 "100k" V 8200 1975 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8130 1975 50  0001 C CNN
-F 3 "~" H 8200 1975 50  0001 C CNN
-F 4 "C25803" V 8200 1975 50  0001 C CNN "JLCPCB"
-	1    8200 1975
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	7600 1600 7600 1925
 Connection ~ 7600 1925
-Wire Wire Line
-	7600 1925 7650 1925
-Wire Wire Line
-	8200 1825 7650 1825
-Wire Wire Line
-	7650 1825 7650 1925
-Connection ~ 7650 1925
-Wire Wire Line
-	7650 1925 7675 1925
-Wire Wire Line
-	8200 2125 8225 2125
-Wire Wire Line
-	8225 2125 8225 2175
 Wire Wire Line
 	7425 2175 7425 2325
 Wire Wire Line
@@ -858,11 +755,179 @@ L Connector:TestPoint TP4
 U 1 1 617EA3AF
 P 1750 6475
 F 0 "TP4" H 1675 6775 50  0000 L CNN
-F 1 "Abs" H 1625 6700 50  0000 L CNN
+F 1 "GND" H 1625 6700 50  0000 L CNN
 F 2 "matterwave:TestPoint_TP107" H 1950 6475 50  0001 C CNN
 F 3 "~" H 1950 6475 50  0001 C CNN
 	1    1750 6475
 	1    0    0    -1  
 $EndComp
 Connection ~ 1750 6475
+$Comp
+L Device:R R12
+U 1 1 61E6F71C
+P 2925 2925
+F 0 "R12" V 2825 2925 50  0000 C CNN
+F 1 "1k" V 2925 2925 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2855 2925 50  0001 C CNN
+F 3 "~" H 2925 2925 50  0001 C CNN
+F 4 "C21190" V 2925 2925 50  0001 C CNN "JLCPCB"
+	1    2925 2925
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 61E781A7
+P 2825 3075
+F 0 "#PWR0101" H 2825 2825 50  0001 C CNN
+F 1 "GND" V 2830 2947 50  0001 R CNN
+F 2 "" H 2825 3075 50  0001 C CNN
+F 3 "" H 2825 3075 50  0001 C CNN
+	1    2825 3075
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2925 3075 2825 3075
+Wire Notes Line
+	2375 3175 6450 3175
+$Comp
+L Device:R_POT RV2
+U 1 1 61E88864
+P 3275 2725
+F 0 "RV2" V 3068 2725 50  0000 C CNN
+F 1 "10k" V 3159 2725 50  0000 C CNN
+F 2 "matterwave:pot_bourns_PTV09" H 3275 2725 50  0001 C CNN
+F 3 "~" H 3275 2725 50  0001 C CNN
+	1    3275 2725
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2925 2475 2925 2725
+Wire Wire Line
+	2925 2725 3075 2725
+Connection ~ 2925 2725
+Wire Wire Line
+	2925 2725 2925 2775
+Wire Wire Line
+	3425 2725 3525 2725
+Wire Wire Line
+	3525 2375 3525 2725
+$Comp
+L synth-components:mono-jack J1
+U 1 1 6004C979
+P 2625 2075
+F 0 "J1" H 2498 2600 50  0000 C CNN
+F 1 "Wave In" H 2625 2050 50  0000 C CNN
+F 2 "synth-components:mono-jack-thonk" H 2625 2075 50  0001 C CNN
+F 3 "" H 2625 2075 50  0001 C CNN
+F 4 "Thonk" H 2625 2075 50  0001 C CNN "Vendor"
+F 5 "PJ398SM" H 2625 2075 50  0001 C CNN "PN"
+F 6 "https://www.thonk.co.uk/shop/thonkiconn/" H 2625 2075 50  0001 C CNN "Link"
+	1    2625 2075
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R RD1
+U 1 1 626235C1
+P 2725 2425
+F 0 "RD1" V 2625 2425 50  0000 C CNN
+F 1 "1M" V 2725 2425 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2655 2425 50  0001 C CNN
+F 3 "~" H 2725 2425 50  0001 C CNN
+F 4 "C21190" V 2725 2425 50  0001 C CNN "JLCPCB"
+	1    2725 2425
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2725 2575 2725 2600
+Wire Wire Line
+	2625 2375 2625 2600
+Wire Wire Line
+	2625 2600 2725 2600
+Connection ~ 2725 2600
+Wire Wire Line
+	2725 2600 2725 2625
+Wire Wire Line
+	3075 2725 3075 2875
+Wire Wire Line
+	3075 2875 3275 2875
+Connection ~ 3075 2725
+Wire Wire Line
+	3075 2725 3125 2725
+Wire Wire Line
+	9450 2275 9600 2275
+$Comp
+L Device:R_POT RV3
+U 1 1 6265A332
+P 8700 2600
+F 0 "RV3" V 8493 2600 50  0000 C CNN
+F 1 "10k" V 8584 2600 50  0000 C CNN
+F 2 "matterwave:pot_bourns_PTV09" H 8700 2600 50  0001 C CNN
+F 3 "~" H 8700 2600 50  0001 C CNN
+F 4 "Output Gain" V 8700 2600 50  0001 C CNN "Field4"
+	1    8700 2600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9450 2275 9450 2600
+Wire Wire Line
+	8700 2375 8700 2450
+Wire Wire Line
+	8850 2600 9450 2600
+Wire Wire Line
+	7600 1925 7675 1925
+Wire Wire Line
+	7600 1925 7600 2025
+Wire Wire Line
+	7025 2175 7100 2175
+$Comp
+L Device:R R9
+U 1 1 6268C76A
+P 8525 2775
+F 0 "R9" V 8600 2775 50  0000 C CNN
+F 1 "1k" V 8525 2775 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8455 2775 50  0001 C CNN
+F 3 "~" H 8525 2775 50  0001 C CNN
+F 4 "C21190" V 8525 2775 50  0001 C CNN "JLCPCB"
+	1    8525 2775
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 62693848
+P 8525 2975
+F 0 "#PWR0102" H 8525 2725 50  0001 C CNN
+F 1 "GND" H 8600 2825 50  0000 R CNN
+F 2 "" H 8525 2975 50  0001 C CNN
+F 3 "" H 8525 2975 50  0001 C CNN
+	1    8525 2975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8525 2925 8525 2975
+Wire Wire Line
+	8550 2600 8525 2600
+Wire Wire Line
+	8525 2600 8525 2625
+$Comp
+L matterwave:Hole H1
+U 1 1 625FD151
+P 6200 4125
+F 0 "H1" H 6299 4171 50  0000 L CNN
+F 1 "Hole" H 6299 4080 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 6200 4125 50  0001 C CNN
+F 3 "" H 6200 4125 50  0001 C CNN
+	1    6200 4125
+	1    0    0    -1  
+$EndComp
+$Comp
+L matterwave:Hole H2
+U 1 1 626001AD
+P 6600 4125
+F 0 "H2" H 6699 4171 50  0000 L CNN
+F 1 "Hole" H 6699 4080 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 6600 4125 50  0001 C CNN
+F 3 "" H 6600 4125 50  0001 C CNN
+	1    6600 4125
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
