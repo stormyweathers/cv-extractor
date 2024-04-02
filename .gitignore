@@ -2,3 +2,4 @@
 *.drl
 .ipynb_checkpoints
 cv-extractor-backups
+*.lck
